@@ -25,7 +25,7 @@ _This application will allow a user to input an amount in USD and choose which c
 3. `npm run build` - if on Mac change //&&// to //;// in package.json , scripts, start section.
 * _Check package.json to confirm you have all the necessary dependencies._
 4. `npm run start`
-5. `Create .env file and store your personal api key in there as API_KEY=[yourkeyhere] . Add env to gitignore folder and push to your remote github before adding any other files.`
+5. `Create .env file and store your personal api key in there as API_KEY=[yourkeyhere]. Add .env to gitignore folder. git add .gitignore - git commit - and git push to your remote github before adding any other files. This will ensure that your private api key will not push to GH.`
 
 ## Logic/Specs
 * _User inputs number_
@@ -34,8 +34,8 @@ _This application will allow a user to input an amount in USD and choose which c
 
 ## Known Bugs
 
-* 
-* 
+* _Can only convert from US dollars to a different currency_
+
 
 ## License
 - MIT

@@ -6,9 +6,9 @@ export default class ExchangeService {
       if (!response.ok) {
         throw Error(response.statusText);
       }
-        return response.json();    
-        } catch(error) {
-        return error.message;
+      return response.json();    
+    } catch(error) {
+      return error.message;
     }
   }
 }
