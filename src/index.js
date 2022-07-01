@@ -6,13 +6,19 @@ import ExchangeService from './exchange-service.js';
 
 
 
+function getElements(response) {
+  if (response !== null) {
+    let inputDollar = $('#dollarInput').val();
+    $('#converted').text(parseInt(response * inputDollar)); 
+    } else {
+    $('.showErrors').text(`There was an error processing your request. Please try a different currency.`)
+    }
+  }
 async function makeApiCall(currencyInput) {
   const response = await ExchangeService.getChange(currencyInput);
   console.log(response);
   getElements(response.conversion_rates[currencyInput]);
 }
-
-
 
 $(document).ready(function() {
   $('#convert').click(function() {
@@ -22,11 +28,3 @@ $(document).ready(function() {
 });
 
 
-function getElements(response) {
-  if (response !== null) {
-    let inputDollar = $('#dollarInput').val();
-    $('#output').text(parseInt(response * inputDollar)); 
-    } else {
-    $('.showErrors').text(`There was an error processing your request. Please try a different currency.`)
-    }
-  }
