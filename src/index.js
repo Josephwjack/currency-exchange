@@ -8,6 +8,7 @@ import ExchangeService from './exchange-service.js';
 
 async function makeApiCall(currencyInput) {
   const response = await ExchangeService.getChange(currencyInput);
+  console.log(response);
   getElements(response.conversion_rates[currencyInput]);
 }
 
