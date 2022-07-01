@@ -9,6 +9,8 @@
     <h1>See real time currency exchange rates</h1>
     <label for="dollarInput">Enter USD to convert:</label>
     <input id="dollarInput" type="number" placeholder=0 value=1>
+    <br>
+    <br>
     <label for="currencyInput"> Select which currency you would like returned:</label>
     <select class="form-control" name="currencyInput" id="currencyInput">
       <option value="AUD">Australian Dollars</option>
@@ -23,10 +25,13 @@
       <option value="THB">Thailand Baht</option>
       <option value="TWD">Taiwan Dollar</option>
     </select>  
-    <button class="btn-success" id="convert">Exchange</button>
+    <br>
+      <button class="btn btn-primary" id="convert">Exchange</button>
     </div>
   </div>
-<div id="output">Based on your selection the your exchange would come out to : <span id="converted"></div>
-<div class="showErrors"></div>
+  <div class="notForm">
+    <div class="showErrors"></div>
+    <div id="output">Based on your selection the your exchange would come out to : <span id="converted"></div>
+  </div>
 </body>
 </html>

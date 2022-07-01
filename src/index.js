@@ -22,8 +22,10 @@ async function makeApiCall(currencyInput) {
 
 $(document).ready(function() {
   $('#convert').click(function() {
+    event.preventDefault()
     let currencyInput = $('#currencyInput').val();
     makeApiCall(currencyInput);
+    $('.notForm').show();
   });
 });
 
