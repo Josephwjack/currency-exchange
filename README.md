@@ -1,24 +1,29 @@
-# (Application Name)
+# Currency Exchange
 
-#### (Brief Description of Application)
+#### Currency exchanger - Week 6 project @ Epicodus
 
-#### By (Joseph Jack)  [GitHub Pages link]
+#### By _Joseph Jack_  [GitHub Pages link]
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* _JavaScript_
+* _JQuery_
+* _Jest_
+* _ESlint_
+* _HTML_
+* _Webpack & Webpack dev server_
+* _Node.js_
+
 
 ## Description
-_This repository allows you to pull the files for use in your own project, including (_ tests _/.., src/.., .babelrc, .eslintrc, .gitignore, package-lock.json, package.json, webpack.config.js)_ 
+_This application will allow a user to input an amount in USD and choose which currency it should be converted into. Project built to become familier with api's._ 
 ## Setup/Installation Requirements
 
 1. `Git clone to local terminal`
 2. `npm install`
 3. `npm run build` - if on Mac change //&&// to //;// in package.json , scripts, start section
-4. npm run start
+4. `npm run start`
+5. `Create .env file and store your personal api key in there as API_KEY=[yourkeyhere]`
 
 ## Logic/Specs
 
