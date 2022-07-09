@@ -42,4 +42,4 @@ _This application will allow a user to input an amount in USD and choose which c
 
 ## Contact Information
 
-Copyright (c) _6/2022_  -- _Joseph Jack_ [GitHub Account](https://github.com/Josephwjack)
+Copyright (c) _7/2022_  -- _Joseph Jack_ [GitHub Account](https://github.com/Josephwjack)
