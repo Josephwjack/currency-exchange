@@ -7,24 +7,23 @@ import ExchangeService from './exchange-service.js';
 
 
 function getElements(response) {
-  if (response !== null) {
+  if (response.ok) {
     let inputDollar = $('#dollarInput').val();
-    $('#converted').text(parseInt(response * inputDollar)); 
+    let currencyInput = $('#currencyInput').val();
+    $('#converted').text(parseInt(response.conversion_rates[currencyInput] * inputDollar)); 
   } else {
     $('.showErrors').text(`There was an error processing your request. Please try a different currency.`);
   }
-}
+}  
 async function makeApiCall(currencyInput) {
   const response = await ExchangeService.getChange(currencyInput);
-  console.log(response);
-  getElements(response.conversion_rates[currencyInput]);
+  getElements(response);
 }
 
 $(document).ready(function() {
   $('#convert').click(function() {
     event.preventDefault();
-    let currencyInput = $('#currencyInput').val();
-    makeApiCall(currencyInput);
+    makeApiCall();
     $('.notForm').fadeIn();
   });
 });
