@@ -7,12 +7,12 @@ import ExchangeService from './exchange-service.js';
 
 
 function getElements(response) {
-  if (response.ok) {
+  if (response) {
     let inputDollar = $('#dollarInput').val();
     let currencyInput = $('#currencyInput').val();
     $('#converted').text(parseInt(response.conversion_rates[currencyInput] * inputDollar)); 
   } else {
-    $('.showErrors').text(`There was an error processing your request. Please try a different currency.`);
+    $('#converted').text(`No result available. There was an error processing your request. Please try a different currency.`);
   }
 }  
 async function makeApiCall(currencyInput) {
@@ -24,7 +24,7 @@ $(document).ready(function() {
   $('#convert').click(function() {
     event.preventDefault();
     makeApiCall();
-    $('.notForm').fadeIn();
+    
   });
 });
 
